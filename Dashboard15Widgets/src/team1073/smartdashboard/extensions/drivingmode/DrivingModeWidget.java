@@ -7,6 +7,7 @@
 package team1073.smartdashboard.extensions.drivingmode;
 
 
+import edu.wpi.first.smartdashboard.gui.StaticWidget;
 import edu.wpi.first.smartdashboard.gui.Widget;
 import edu.wpi.first.smartdashboard.properties.MultiProperty;
 import edu.wpi.first.smartdashboard.properties.Property;
@@ -19,7 +20,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class DrivingModeWidget extends Widget
+public class DrivingModeWidget extends StaticWidget
 {
     public static final DataType[] TYPES = {DataType.NUMBER};
     public static final String NAME = "Driving Mode";
@@ -35,7 +36,7 @@ public class DrivingModeWidget extends Widget
         mode.add("Both", 3);
         mode.add("Error", -1);
     }
-    @Override
+    //@Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).intValue();
@@ -47,7 +48,7 @@ public class DrivingModeWidget extends Widget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(100, 50));
+        setPreferredSize(new Dimension(100, 25));
     }
 
     @Override
@@ -71,37 +72,37 @@ public class DrivingModeWidget extends Widget
         String mode1 = "Cubic Drive";
         String mode2 = "Field Relative";
         g2.setPaint(c3);
-        g2.drawOval(0, 0, 10, 10);
+        g2.drawOval(0, 1, 10, 10);
         g2.drawOval(0, 15, 10, 10);
-        g2.drawString(mode1, 13, 0);
-        g2.drawString(mode2, 13, 15);
+        g2.drawString(mode1, 13, 11);
+        g2.drawString(mode2, 13, 25);
         if (value == 0)
         {
             g2.setPaint(c2);
-            g2.drawOval(1, 1, 9, 9);
-            g2.drawOval(16, 16, 9, 9);
+            g2.fillOval(0, 0, 10, 10);
+            g2.fillOval(0, 15, 10, 10);
             
         }
         else if(value == 1)
         {
             g2.setPaint(c2);
-            g2.drawOval(1, 1, 9, 9);
+            g2.fillOval(0, 0, 10, 10);
             g2.setPaint(c1);
-            g2.drawOval(16, 16, 9, 9);
+            g2.fillOval(0, 15, 10, 10);
         }
         else if(value == 2)
         {
             g2.setPaint(c1);
-            g2.drawOval(1, 1, 9, 9);
+            g2.fillOval(0, 0, 10, 10);
             g2.setPaint(c2);
-            g2.drawOval(16, 16, 9, 9);
+            g2.fillOval(0, 15, 10, 10);
         }
         else if(value == 3)
         {
             g2.setPaint(c1);
-            g2.drawOval(1, 1, 9, 9);
+            g2.fillOval(0, 0, 10, 10);
             g2.setPaint(c1);
-            g2.drawOval(16, 16, 9, 9);
+            g2.fillOval(0, 15, 10, 10);
         }
         
     }
