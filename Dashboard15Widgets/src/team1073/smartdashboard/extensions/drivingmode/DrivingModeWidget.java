@@ -48,7 +48,7 @@ public class DrivingModeWidget extends StaticWidget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(100, 25));
+        setPreferredSize(new Dimension(100, 28));
     }
 
     @Override
