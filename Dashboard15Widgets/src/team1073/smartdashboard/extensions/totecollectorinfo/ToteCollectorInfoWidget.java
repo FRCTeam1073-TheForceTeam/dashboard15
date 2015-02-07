@@ -26,20 +26,14 @@ public class ToteCollectorInfoWidget extends StaticWidget {
     public static final String NAME = "ToteCollectorInfo Widget";
     private double value;
     public final MultiProperty distance = new MultiProperty(this, "ToteCollectorIfo");
-    private int feet;
-    private int inches;
-    private int inches2;
-    private String strFeet = "";
-    private String strInches = "";
 
 
     
     
     public ToteCollectorInfoWidget() {
-       /* distance.add("10 Feet", 229);
-        distance.add(" Feet", 200);
-        distance.add(NAME, value);
-       */
+        distance.add("Collecting", 0);
+        distance.add("At Rest", 1);
+        distance.add("Purging", 2);
     }
 
   //  @Override
@@ -50,7 +44,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
 
     @Override
     public void init() {
-        setPreferredSize(new Dimension(500, 500));
+        setPreferredSize(new Dimension(100, 14));
     }
 
     @Override
@@ -67,22 +61,32 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         String toteConstant = "Doing Nothing";
         String totePurge = "Purging";
         
-        g2.drawOval(100, 100, 50, 50);
-        
-        if (value == 0) {
-            Color c1 = new Color(0, 255, 0);
+        g2.drawOval(1, 1, 10, 10);
+        Color c0 = new Color(0, 0, 0);
+        Color c1 = new Color(0, 255, 0);
+        Color c2 = new Color(255, 215, 0);
+        Color c3 = new Color(255, 0, 0);
+
+        if (value == 0) 
+        {
             g2.setPaint(c1);
-            g2.fillOval(100, 100, 50, 50);
+            g2.fillOval(1, 1, 10, 10);
+            g2.setPaint(c0);
+            g2.drawString(toteCollect, 13, 11);
         }
-        if (value == 1) {
-            Color c1 = new Color(255, 255, 255);
-            g2.setPaint(c1);
-            g2.fillOval(100, 100, 50, 50);
+        if (value == 1) 
+        {
+            g2.setPaint(c2);
+            g2.fillOval(1, 1, 10, 10);
+            g2.setPaint(c0);
+            g2.drawString(toteConstant, 13, 11);
         }
-           if (value == 2) {
-            Color c1 = new Color(255, 0, 0);
-            g2.setPaint(c1);
-            g2.fillOval(100, 100, 50, 50);
+           if (value == 2) 
+        {
+            g2.setPaint(c3);
+            g2.fillOval(1, 1, 10, 10);
+            g2.setPaint(c0);
+            g2.drawString(totePurge, 13, 11);
         }
         //if collecting = flash green
         //if constant = nothing
