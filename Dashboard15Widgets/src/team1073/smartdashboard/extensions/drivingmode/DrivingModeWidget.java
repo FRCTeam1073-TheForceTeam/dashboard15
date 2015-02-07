@@ -79,28 +79,28 @@ public class DrivingModeWidget extends StaticWidget
         if (value == 0)
         {
             g2.setPaint(c2);
-            g2.fillOval(0, 0, 10, 10);
+            g2.fillOval(0, 1, 10, 10);
             g2.fillOval(0, 15, 10, 10);
             
         }
         else if(value == 1)
         {
             g2.setPaint(c2);
-            g2.fillOval(0, 0, 10, 10);
+            g2.fillOval(0, 1, 10, 10);
             g2.setPaint(c1);
             g2.fillOval(0, 15, 10, 10);
         }
         else if(value == 2)
         {
             g2.setPaint(c1);
-            g2.fillOval(0, 0, 10, 10);
+            g2.fillOval(0, 1, 10, 10);
             g2.setPaint(c2);
             g2.fillOval(0, 15, 10, 10);
         }
         else if(value == 3)
         {
             g2.setPaint(c1);
-            g2.fillOval(0, 0, 10, 10);
+            g2.fillOval(0, 1, 10, 10);
             g2.setPaint(c1);
             g2.fillOval(0, 15, 10, 10);
         }

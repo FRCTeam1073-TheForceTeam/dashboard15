@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package team1073.smartdashboard.extensions.toteCount;
+package team1073.smartdashboard.extensions.roller;
 
 
 import edu.wpi.first.smartdashboard.gui.StaticWidget;
@@ -21,22 +21,20 @@ import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class ToteCountWidget extends StaticWidget
+public class RollerWidget extends StaticWidget
 {
     public static final DataType[] TYPES = {DataType.NUMBER};
-    public static final String NAME = "Tote Count";
+    public static final String NAME = "Roller";
     private int value = -1;
-    public final MultiProperty mode = new MultiProperty(this, "Tote Count");
+    public final MultiProperty mode = new MultiProperty(this, "Roller");
 
     
-    public ToteCountWidget()
+    public RollerWidget()
     {
         /*This constructor is only necessary for testing purposes*/
-        mode.add("None", 0);
-        mode.add("One", 1);
-        mode.add("Two", 2);
-        mode.add("Three", 3);
-        mode.add("Four", 4);
+        mode.add("OFF", 0);
+        mode.add("ON", 1);
+
     }
     //@Override
     public void setValue(Object o) 
@@ -50,7 +48,7 @@ public class ToteCountWidget extends StaticWidget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(100, 57));
+        setPreferredSize(new Dimension(100, 14));
     }
 
     @Override
@@ -64,19 +62,24 @@ public class ToteCountWidget extends StaticWidget
     {
         Graphics2D g2 = (Graphics2D)g;
         Dimension size = getSize();
-        Color c1 = new Color(0,0,0);
-        Color c2 = new Color(0, 191, 255);
-        Color c3 = new Color(0, 178, 238);
-        GradientPaint gp = new GradientPaint(0, 0, c2, size.width/2, 0, c3);
-        String num = ""+value;
+        String r = "Roller";
+        Color c0 = new Color(0, 0, 0);
+        Color c1 = new Color(0, 255, 0);
+        Color c2 = new Color(255, 0, 0);
         
-        g2.setPaint(gp);
-        g2.fill(new Rectangle2D.Double(0, 0, size.width, size.height));
-        g2.setPaint(c1);
-        g2.setFont(new Font("Default", Font.BOLD, 72));
-        g2.drawString(num, 0, size.height-1);
-        g2.setFont(new Font ("default", Font.BOLD, 12));
-        g2.drawString("totes", 60, size.height-1);
+        g2.drawOval(1, 1, 10, 10);
+        g2.drawString(r, 13, 11);
+        if(value == 0)
+        {
+            g2.setPaint(c2);
+            g2.fillOval(1, 1, 10, 10);
+        }
+        else
+        {
+            g2.setPaint(c1);
+            g2.fillOval(1, 1, 10, 10);
+        }
+
     }
     
 }

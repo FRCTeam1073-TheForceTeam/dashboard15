@@ -132,11 +132,11 @@ public class PSIGaugeWidget extends StaticWidget
         
         if(value < 99.9999999999999999999999999999999999)
         {
-            g.drawString(PSI, (int) (size.width/2.7), (int)(size.height/1.3));
+            g.drawString(PSI, (int) (size.width/2.7), (int)(size.height-1));
         }
         else
         {
-            g.drawString(PSI, (int) (size.width/2.9), (int)(size.height/1.3));
+            g.drawString(PSI, (int) (size.width/2.9), (int)(size.height-1));
         }
         
         g2.setPaint(Color.WHITE);
