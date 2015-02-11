@@ -23,17 +23,17 @@ import java.awt.geom.Rectangle2D;
 public class ToteCollectorInfoWidget extends StaticWidget {
     
     public static final DataType[] TYPES = {DataType.NUMBER };
-    public static final String NAME = "ToteCollectorInfo Widget";
+    public static final String NAME = "ToteCollectorInfo";
     private double value;
-    public final MultiProperty distance = new MultiProperty(this, "ToteCollectorIfo");
+    public final MultiProperty mode = new MultiProperty(this, "Collector");
 
 
     
     
     public ToteCollectorInfoWidget() {
-        distance.add("Collecting", 0);
-        distance.add("At Rest", 1);
-        distance.add("Purging", 2);
+        mode.add("Collecting", 0);
+        mode.add("At Rest", 1);
+        mode.add("Purging", 2);
     }
 
   //  @Override
@@ -44,7 +44,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
 
     @Override
     public void init() {
-        setPreferredSize(new Dimension(100, 14));
+        setPreferredSize(new Dimension(100, 17));
     }
 
     @Override
@@ -61,7 +61,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         String toteConstant = "Doing Nothing";
         String totePurge = "Purging";
         
-        g2.drawOval(1, 1, 10, 10);
+        g2.drawOval(1, 1, 15, 15);
         Color c0 = new Color(0, 0, 0);
         Color c1 = new Color(0, 255, 0);
         Color c2 = new Color(255, 215, 0);
@@ -70,23 +70,26 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         if (value == 0) 
         {
             g2.setPaint(c1);
-            g2.fillOval(1, 1, 10, 10);
+            g2.fillOval(1, 1, 15, 15);
             g2.setPaint(c0);
-            g2.drawString(toteCollect, 13, 11);
+            g2.drawString(toteCollect, 20, 13);
+            g2.drawOval(1, 1, 15, 15);
         }
         if (value == 1) 
         {
             g2.setPaint(c2);
-            g2.fillOval(1, 1, 10, 10);
+            g2.fillOval(1, 1, 15, 15);
             g2.setPaint(c0);
-            g2.drawString(toteConstant, 13, 11);
+            g2.drawString(toteConstant, 20, 13);
+            g2.drawOval(1, 1, 15, 15);
         }
            if (value == 2) 
         {
             g2.setPaint(c3);
-            g2.fillOval(1, 1, 10, 10);
+            g2.fillOval(1, 1, 15, 15);
             g2.setPaint(c0);
-            g2.drawString(totePurge, 13, 11);
+            g2.drawString(totePurge, 20, 13);
+            g2.drawOval(1, 1, 15, 15);
         }
         //if collecting = flash green
         //if constant = nothing

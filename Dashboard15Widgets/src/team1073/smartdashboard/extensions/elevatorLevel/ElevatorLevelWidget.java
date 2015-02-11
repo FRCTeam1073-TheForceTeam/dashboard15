@@ -87,6 +87,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.setColor(c1);
         g2.fill(C1);
         g2.setColor(c2);
+        g2.draw(C1);
         g2.drawString("4", 7, 14);
         }
         else if(value == 2)
@@ -94,6 +95,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.setColor(c1);
         g2.fill(C2);
         g2.setColor(c2);
+        g2.draw(C2);
         g2.drawString("3", 7, 32);
         }
         else if(value == 1)
@@ -101,6 +103,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.setColor(c1);
         g2.fill(C3);
         g2.setColor(c2);
+        g2.draw(C3);
         g2.drawString("2", 7, 50);
         }
         else if(value == 0)
@@ -108,6 +111,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.setColor(c1);
         g2.fill(C4);
         g2.setColor(c2);
+        g2.draw(C4);
         g2.drawString("1", 7, 68);
         }
             

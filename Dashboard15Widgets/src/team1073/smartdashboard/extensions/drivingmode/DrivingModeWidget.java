@@ -48,7 +48,7 @@ public class DrivingModeWidget extends StaticWidget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(100, 28));
+        setPreferredSize(new Dimension(100, 38));
     }
 
     @Override
@@ -72,37 +72,48 @@ public class DrivingModeWidget extends StaticWidget
         String mode1 = "Cubic Drive";
         String mode2 = "Field Relative";
         g2.setPaint(c3);
-        g2.drawOval(0, 1, 10, 10);
-        g2.drawOval(0, 15, 10, 10);
-        g2.drawString(mode1, 13, 11);
-        g2.drawString(mode2, 13, 25);
+        g2.drawOval(0, 1, 15, 15);
+        g2.drawOval(0, 20, 15, 15);
+        g2.drawString(mode1, 20, 13);
+        g2.drawString(mode2, 20, 32);
         if (value == 0)
         {
             g2.setPaint(c2);
-            g2.fillOval(0, 1, 10, 10);
-            g2.fillOval(0, 15, 10, 10);
+            g2.fillOval(0, 1, 15, 15);
+            g2.fillOval(0, 20, 15, 15);
+            g2.setPaint(c3);
+            g2.drawOval(0, 1, 15, 15);
+            g2.drawOval(0, 20, 15, 15);
             
         }
         else if(value == 1)
         {
-            g2.setPaint(c2);
-            g2.fillOval(0, 1, 10, 10);
             g2.setPaint(c1);
-            g2.fillOval(0, 15, 10, 10);
+            g2.fillOval(0, 1, 15, 15);
+            g2.setPaint(c2);
+            g2.fillOval(0, 20, 15, 15);
+            g2.setPaint(c3);
+            g2.drawOval(0, 1, 15, 15);
+            g2.drawOval(0, 20, 15, 15);
         }
         else if(value == 2)
         {
-            g2.setPaint(c1);
-            g2.fillOval(0, 1, 10, 10);
             g2.setPaint(c2);
-            g2.fillOval(0, 15, 10, 10);
+            g2.fillOval(0, 1, 15, 15);
+            g2.setPaint(c1);
+            g2.fillOval(0, 20, 15, 15);
+            g2.setPaint(c3);
+            g2.drawOval(0, 1, 15, 15);
+            g2.drawOval(0, 20, 15, 15);
         }
         else if(value == 3)
         {
             g2.setPaint(c1);
-            g2.fillOval(0, 1, 10, 10);
-            g2.setPaint(c1);
-            g2.fillOval(0, 15, 10, 10);
+            g2.fillOval(0, 1, 15, 15);
+            g2.fillOval(0, 20, 15, 15);
+            g2.setPaint(c3);
+            g2.drawOval(0, 1, 15, 15);
+            g2.drawOval(0, 20, 15, 15);
         }
         
     }
