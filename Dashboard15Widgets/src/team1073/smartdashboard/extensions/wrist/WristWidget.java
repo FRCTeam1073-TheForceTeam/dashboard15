@@ -23,23 +23,23 @@ import java.awt.geom.RoundRectangle2D;
 
 public class WristWidget extends StaticWidget
 {
-    public static final DataType[] TYPES = {DataType.NUMBER};
+    public static final DataType[] TYPES = {DataType.BOOLEAN};
     public static final String NAME = "Wrist";
-    private int value = -1;
+    private boolean value = true;
     public final MultiProperty mode = new MultiProperty(this, "status");
 
     
     public WristWidget()
     {
         /*This constructor is only necessary for testing purposes*/
-        mode.add("Retracted", 0);
-        mode.add("Extended", 1);
+        mode.add("Retracted", true);
+        mode.add("Extended", false);
 
     }
     //@Override
     public void setValue(Object o) 
     {
-        this.value = ((Number) o).intValue();
+        this.value = ((Boolean) o).booleanValue();
        
         repaint();
 
@@ -69,13 +69,13 @@ public class WristWidget extends StaticWidget
         Color c2 = new Color(255, 0, 0);
         
         g2.drawOval(1, 1, 15, 15);
-        if(value == 0)
+        if(value)
         {
             g2.setPaint(c2);
             g2.fillOval(1, 1, 15, 15);
             g2.setPaint(c0);
             g2.drawOval(1, 1, 15, 15);
-            g2.drawString(r, 20, 19);
+            g2.drawString(r, 20, 13);
         }
         else
         {
