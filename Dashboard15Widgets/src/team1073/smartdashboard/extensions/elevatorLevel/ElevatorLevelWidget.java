@@ -65,9 +65,9 @@ public class ElevatorLevelWidget extends StaticWidget
     {
         Graphics2D g2 = (Graphics2D)g;
         Dimension size = getSize();
-        Color c1 = new Color(255, 236, 139);
+        Color c1 = new Color(85, 249, 249);
         Color c2 = new Color(0, 0, 0);
-        Color c3 = new Color(255, 255, 255);
+        Color c3 = new Color(255, 236, 139);
         
         Ellipse2D.Double C1 = new Ellipse2D.Double(1, 1, 17, 17);
         Ellipse2D.Double C2 = new Ellipse2D.Double(1, 19, 17, 17);
