@@ -33,10 +33,10 @@ public class ElevatorLevelWidget extends StaticWidget
     public ElevatorLevelWidget()
     {
         /*This constructor is only necessary for testing purposes*/
-        mode.add("Level 1", 0);
-        mode.add("Level 2", 1);
-        mode.add("Level 3", 2);
-        mode.add("Level 4", 3);
+        mode.add("Level G", 0);
+        mode.add("Level 1", 1);
+        mode.add("Level 2", 2);
+        mode.add("Level 3", 3);
 
     }
     //@Override
@@ -67,19 +67,26 @@ public class ElevatorLevelWidget extends StaticWidget
         Dimension size = getSize();
         Color c1 = new Color(255, 236, 139);
         Color c2 = new Color(0, 0, 0);
+        Color c3 = new Color(255, 255, 255);
         
         Ellipse2D.Double C1 = new Ellipse2D.Double(1, 1, 17, 17);
         Ellipse2D.Double C2 = new Ellipse2D.Double(1, 19, 17, 17);
         Ellipse2D.Double C3 = new Ellipse2D.Double(1, 37, 17, 17);
         Ellipse2D.Double C4 = new Ellipse2D.Double(1, 55, 17, 17);
+        g2.setPaint(c3);
+        g2.fill(C1);
+        g2.fill(C2);
+        g2.fill(C3);
+        g2.fill(C4);
+        g2.setPaint(c2);
         g2.draw(C1);
         g2.draw(C2);
         g2.draw(C3);
         g2.draw(C4);
-        g2.drawString("4", 7, 14);
-        g2.drawString("3", 7, 32);
-        g2.drawString("2", 7, 50);
-        g2.drawString("1", 7, 68);
+        g2.drawString("3", 7, 14);
+        g2.drawString("2", 7, 32);
+        g2.drawString("1", 7, 50);
+        g2.drawString("G", 7, 68);
         g2.drawString("Level", 20, size.height/2+3);
         
         if(value == 3)
@@ -88,7 +95,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.fill(C1);
         g2.setColor(c2);
         g2.draw(C1);
-        g2.drawString("4", 7, 14);
+        g2.drawString("3", 7, 14);
         }
         else if(value == 2)
         {
@@ -96,7 +103,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.fill(C2);
         g2.setColor(c2);
         g2.draw(C2);
-        g2.drawString("3", 7, 32);
+        g2.drawString("2", 7, 32);
         }
         else if(value == 1)
         {
@@ -104,7 +111,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.fill(C3);
         g2.setColor(c2);
         g2.draw(C3);
-        g2.drawString("2", 7, 50);
+        g2.drawString("1", 7, 50);
         }
         else if(value == 0)
         {
@@ -112,7 +119,7 @@ public class ElevatorLevelWidget extends StaticWidget
         g2.fill(C4);
         g2.setColor(c2);
         g2.draw(C4);
-        g2.drawString("1", 7, 68);
+        g2.drawString("G", 7, 68);
         }
             
     }
