@@ -120,7 +120,7 @@ public class DrivingModeWidget extends StaticWidget
             g2.drawOval(0, 1, 15, 15);
             g2.drawOval(0, 20, 15, 15);
         }
-        else if(value == -1) {
+        else if(value == -1) {          //by julia
             g2.setPaint(c3);
             g2.fillOval(0, 1, 15, 15);
             g2.fillOval(0, 20, 15, 15);
