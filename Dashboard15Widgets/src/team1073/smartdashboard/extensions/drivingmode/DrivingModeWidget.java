@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,6 +37,8 @@ public class DrivingModeWidget extends StaticWidget
         mode.add("FieldRel", 2);
         mode.add("Both", 3);
         mode.add("Error", -1);
+        // else = "UnexpectedError"
+        // errors are black&yellow
     }
     //@Override
     public void setValue(Object o) 
@@ -66,6 +70,7 @@ public class DrivingModeWidget extends StaticWidget
         Color c1 = new Color(0, 205, 0);
         Color c2 = new Color(238, 0, 0);
         Color c3 = new Color(0, 0, 0);
+        Color c4 = new Color(251, 223, 32);
         
         
         
@@ -114,6 +119,22 @@ public class DrivingModeWidget extends StaticWidget
             g2.setPaint(c3);
             g2.drawOval(0, 1, 15, 15);
             g2.drawOval(0, 20, 15, 15);
+        }
+        else if(value == -1) {
+            g2.setPaint(c3);
+            g2.fillOval(0, 1, 15, 15);
+            g2.fillOval(0, 20, 15, 15);
+            // fill circles black
+        }
+        
+        else {
+            g2.setPaint(c4);
+            g2.fillOval(0, 1, 15, 15);
+            g2.fillOval(0, 20, 15, 15);
+            g2.setPaint(c3);
+            g2.drawOval(0, 1, 15, 15);
+            g2.drawOval(0, 20, 15, 15);
+               // fill circles yellow   
         }
         
     }
