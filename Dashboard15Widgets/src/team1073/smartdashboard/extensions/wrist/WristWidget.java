@@ -48,7 +48,7 @@ public class WristWidget extends StaticWidget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(100, 17));
+        setPreferredSize(new Dimension(100, 32));
     }
 
     @Override
@@ -68,22 +68,22 @@ public class WristWidget extends StaticWidget
         Color c1 = new Color(0, 255, 0);
         Color c2 = new Color(255, 0, 0);
         
-        g2.drawOval(1, 1, 15, 15);
+        g2.drawOval(1, 1, 30, 30);
         if(value)
         {
             g2.setPaint(c2);
-            g2.fillOval(1, 1, 15, 15);
+            g2.fillOval(1, 1, 30, 30);
             g2.setPaint(c0);
-            g2.drawOval(1, 1, 15, 15);
-            g2.drawString(r, 20, 13);
+            g2.drawOval(1, 1, 30, 30);
+            g2.drawString(r, 35, 30);
         }
         else
         {
             g2.setPaint(c1);
-            g2.fillOval(1, 1, 15, 15);
+            g2.fillOval(1, 1, 30, 30);
             g2.setPaint(c0);
-            g2.drawOval(1, 1, 15, 15);
-            g2.drawString(e, 20, 13);
+            g2.drawOval(1, 1, 30, 30);
+            g2.drawString(e, 35, 20);
         }
 
     }

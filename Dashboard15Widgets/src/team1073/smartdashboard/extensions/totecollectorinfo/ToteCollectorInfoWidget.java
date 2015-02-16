@@ -44,7 +44,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
 
     @Override
     public void init() {
-        setPreferredSize(new Dimension(100, 17));
+        setPreferredSize(new Dimension(100, 32));
     }
 
     @Override
@@ -61,7 +61,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         String toteConstant = "Doing Nothing";
         String totePurge = "Purging";
         
-        g2.drawOval(1, 1, 15, 15);
+        g2.drawOval(1, 1, 30, 30);
         Color c0 = new Color(0, 0, 0);
         Color c1 = new Color(0, 255, 0);
         Color c2 = new Color(255, 215, 0);
@@ -70,26 +70,26 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         if (value == 0) 
         {
             g2.setPaint(c1);
-            g2.fillOval(1, 1, 15, 15);
+            g2.fillOval(1, 1, 30, 30);
             g2.setPaint(c0);
-            g2.drawString(toteCollect, 20, 13);
-            g2.drawOval(1, 1, 15, 15);
+            g2.drawString(toteCollect, 35, 20);
+            g2.drawOval(1, 1, 30, 30);
         }
         if (value == 1) 
         {
             g2.setPaint(c2);
-            g2.fillOval(1, 1, 15, 15);
+            g2.fillOval(1, 1, 30, 30);
             g2.setPaint(c0);
-            g2.drawString(toteConstant, 20, 13);
-            g2.drawOval(1, 1, 15, 15);
+            g2.drawString(toteConstant, 35, 20);
+            g2.drawOval(1, 1, 30, 30);
         }
            if (value == 2) 
         {
             g2.setPaint(c3);
-            g2.fillOval(1, 1, 15, 15);
+            g2.fillOval(1, 1, 30, 30);
             g2.setPaint(c0);
-            g2.drawString(totePurge, 20, 13);
-            g2.drawOval(1, 1, 15, 15);
+            g2.drawString(totePurge, 35, 20);
+            g2.drawOval(1, 1, 30, 30);
         }
         //if collecting = flash green
         //if constant = nothing
