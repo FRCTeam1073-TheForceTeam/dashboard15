@@ -95,7 +95,7 @@ public class ElevatorLevelWidget extends Widget
         g2.fill(C1);
         g2.setColor(c2);
         g2.draw(C1);
-        g2.drawString("3", 7, 14);
+        g2.drawString("3", 14, 21);
         }
         else if(value == 2)
         {
@@ -103,7 +103,7 @@ public class ElevatorLevelWidget extends Widget
         g2.fill(C2);
         g2.setColor(c2);
         g2.draw(C2);
-        g2.drawString("2", 7, 32);
+        g2.drawString("2", 14, 54);
         }
         else if(value == 1)
         {
@@ -111,7 +111,7 @@ public class ElevatorLevelWidget extends Widget
         g2.fill(C3);
         g2.setColor(c2);
         g2.draw(C3);
-        g2.drawString("1", 7, 50);
+        g2.drawString("1", 14, 87);
         }
         else if(value == 0)
         {
@@ -119,7 +119,7 @@ public class ElevatorLevelWidget extends Widget
         g2.fill(C4);
         g2.setColor(c2);
         g2.draw(C4);
-        g2.drawString("G", 7, 68);
+        g2.drawString("G", 14, 120);
         }
             
     }
