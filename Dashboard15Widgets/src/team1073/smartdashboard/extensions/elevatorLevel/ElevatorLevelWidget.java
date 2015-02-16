@@ -51,7 +51,7 @@ public class ElevatorLevelWidget extends Widget
     @Override
     public void init() 
     {
-        setPreferredSize(new Dimension(50, 75));
+        setPreferredSize(new Dimension(120, 200));
     }
 
     @Override
@@ -69,10 +69,10 @@ public class ElevatorLevelWidget extends Widget
         Color c2 = new Color(0, 0, 0);
         Color c3 = new Color(255, 236, 139);
         
-        Ellipse2D.Double C1 = new Ellipse2D.Double(1, 1, 17, 17);
-        Ellipse2D.Double C2 = new Ellipse2D.Double(1, 19, 17, 17);
-        Ellipse2D.Double C3 = new Ellipse2D.Double(1, 37, 17, 17);
-        Ellipse2D.Double C4 = new Ellipse2D.Double(1, 55, 17, 17);
+        Ellipse2D.Double C1 = new Ellipse2D.Double(1, 1, 30, 30);
+        Ellipse2D.Double C2 = new Ellipse2D.Double(1, 34, 30, 30);
+        Ellipse2D.Double C3 = new Ellipse2D.Double(1, 67, 30, 30);
+        Ellipse2D.Double C4 = new Ellipse2D.Double(1, 100, 30, 30);
         g2.setPaint(c3);
         g2.fill(C1);
         g2.fill(C2);
@@ -83,11 +83,11 @@ public class ElevatorLevelWidget extends Widget
         g2.draw(C2);
         g2.draw(C3);
         g2.draw(C4);
-        g2.drawString("3", 7, 14);
-        g2.drawString("2", 7, 32);
-        g2.drawString("1", 7, 50);
-        g2.drawString("G", 7, 68);
-        g2.drawString("Level", 20, size.height/2+3);
+        g2.drawString("3", 14, 21);
+        g2.drawString("2", 14, 54);
+        g2.drawString("1", 14, 87);
+        g2.drawString("G", 14, 120);
+        g2.drawString("Level", 33, size.height/2-30);
         
         if(value == 3)
         {
