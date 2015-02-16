@@ -21,7 +21,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class ToteCountWidget extends StaticWidget
+public class ToteCountWidget extends Widget
 {
     public static final DataType[] TYPES = {DataType.NUMBER};
     public static final String NAME = "Tote Count";
@@ -38,7 +38,7 @@ public class ToteCountWidget extends StaticWidget
         mode.add("Three", 3);
         mode.add("Four", 4);
     }
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).intValue();

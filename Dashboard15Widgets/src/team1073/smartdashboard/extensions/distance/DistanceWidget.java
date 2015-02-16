@@ -13,7 +13,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
-public class DistanceWidget extends StaticWidget
+public class DistanceWidget extends Widget
 {
     public static final DataType[] TYPES = {DataType.NUMBER };
     public static final String NAME = "Distance";
@@ -37,7 +37,7 @@ public class DistanceWidget extends StaticWidget
         
     }
 
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).doubleValue();

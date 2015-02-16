@@ -22,7 +22,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class ElevatorLevelWidget extends StaticWidget
+public class ElevatorLevelWidget extends Widget
 {
     public static final DataType[] TYPES = {DataType.NUMBER};
     public static final String NAME = "Elevator Level";
@@ -39,7 +39,7 @@ public class ElevatorLevelWidget extends StaticWidget
         mode.add("Level 3", 3);
 
     }
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).intValue();

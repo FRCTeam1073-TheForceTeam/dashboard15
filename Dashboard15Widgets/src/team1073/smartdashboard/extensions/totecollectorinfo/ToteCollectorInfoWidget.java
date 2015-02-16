@@ -20,7 +20,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
-public class ToteCollectorInfoWidget extends StaticWidget {
+public class ToteCollectorInfoWidget extends Widget {
     
     public static final DataType[] TYPES = {DataType.NUMBER };
     public static final String NAME = "ToteCollectorInfo";
@@ -36,7 +36,7 @@ public class ToteCollectorInfoWidget extends StaticWidget {
         mode.add("Purging", 2);
     }
 
-  //  @Override
+    @Override
     public void setValue(Object o) {
         this.value = ((Number) o).doubleValue();
         repaint();

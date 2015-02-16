@@ -27,7 +27,7 @@ import java.awt.RadialGradientPaint;
 import java.awt.geom.Point2D;
 import java.text.DecimalFormat;
 
-public class PSIGaugeWidget extends StaticWidget 
+public class PSIGaugeWidget extends Widget 
 {
     public static final DataType[] TYPES = {DataType.NUMBER };
     public static final String NAME = "PSI Gauge";
@@ -47,7 +47,7 @@ public class PSIGaugeWidget extends StaticWidget
     }
 
     
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).doubleValue();

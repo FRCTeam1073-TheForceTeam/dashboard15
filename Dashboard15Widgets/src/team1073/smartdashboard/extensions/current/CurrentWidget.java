@@ -13,7 +13,7 @@ import java.awt.Graphics;
 import java.text.DecimalFormat;
 
 
-public class CurrentWidget extends StaticWidget
+public class CurrentWidget extends Widget
 {
 
     public static final DataType[] TYPES = {DataType.NUMBER };
@@ -31,7 +31,7 @@ public class CurrentWidget extends StaticWidget
     
     
     
-    //@Override
+    @Override
     public void setValue(Object o)
     {
         this.value = ((Number) o).doubleValue();

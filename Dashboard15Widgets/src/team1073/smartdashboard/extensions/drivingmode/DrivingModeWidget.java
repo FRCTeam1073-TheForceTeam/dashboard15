@@ -22,7 +22,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class DrivingModeWidget extends StaticWidget
+public class DrivingModeWidget extends Widget
 {
     public static final DataType[] TYPES = {DataType.NUMBER};
     public static final String NAME = "Driving Mode";
@@ -40,7 +40,7 @@ public class DrivingModeWidget extends StaticWidget
         // else = "UnexpectedError"
         // errors are black&yellow
     }
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Number) o).intValue();

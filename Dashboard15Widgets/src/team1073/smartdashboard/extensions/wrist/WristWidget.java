@@ -21,7 +21,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 
-public class WristWidget extends StaticWidget
+public class WristWidget extends Widget
 {
     public static final DataType[] TYPES = {DataType.BOOLEAN};
     public static final String NAME = "Wrist";
@@ -36,7 +36,7 @@ public class WristWidget extends StaticWidget
         mode.add("Extended", false);
 
     }
-    //@Override
+    @Override
     public void setValue(Object o) 
     {
         this.value = ((Boolean) o).booleanValue();
